@@ -1,0 +1,33 @@
+<ul *ngIf="francais == true">
+    <li><a href="#"><img id="logo" src="favicon.ico" alt="logo"/></a></li>
+    <li><a href="/jeu">Jeu</a></li>
+    <li><a href="#score">Score</a></li>
+    <li><a href="#parametre">Paramètres</a></li>
+    <li><button (click)="translate()"><img src="assets/images/usa.png" width="45" height="35"/></button></li>
+    <div class="logo_quizz">
+        <li><a href="#"><img src="assets/images/burger_quiz_title.png" width="129"/></a></li>
+    </div>
+    <li><a href="startGame">Ajouter Joueur</a></li>
+    <li><a href="#">Ajouter Equipe</a></li>
+</ul>
+
+<ul *ngIf="francais == false">
+  <li><a href="#"><img id="logoo" src="favicon.ico" alt="logo"/></a></li>
+  <li><a href="/jeu">Game</a></li>
+  <li><a href="#score">Score</a></li>
+  <li><a href="#parametre">Settings</a></li>
+  <li><button (click)="translate()"><img src="assets/images/france.png" width="45" height="35"/></button></li>
+  <div class="logo_quizz">
+    <li><img src="assets/images/burger_quiz_title.png" width="129"/></li>
+  </div>
+</ul>
+<!--
+<div [ngClass]="isDarkTheme ? 'dark-theme' : 'light-theme'"></div>
+<mat-card>
+  <mat-card-content>
+    <mat-slide-toggle (click)="toggleTheme()">Slide me!</mat-slide-toggle>
+  </mat-card-content>
+</mat-card>
+-->
+<router-outlet></router-outlet>
+

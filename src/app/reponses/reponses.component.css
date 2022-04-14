@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Dimbo;
+    src: url('Dimbo Regular.ttf'); 
+  } 
+
+div{
+    font-family: Dimbo, sans-serif;
+    font-weight: bold;
+}

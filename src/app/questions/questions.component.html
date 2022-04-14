@@ -1,0 +1,21 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<ng-container *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</ng-container>
+<mat-card *ngIf="!loading" style="text-align: center">
+  <div>
+    <mat-card-title>La Question  {{ question.id_question }} :</mat-card-title>
+    <mat-card-content>
+      {{ question.libelle }}
+    </mat-card-content>
+    {{ data }}
+    <p>Secondes</p>
+  </div>
+</mat-card>
+<mat-grid-list cols="3" rowHeight="2:1" *ngIf="!loading">
+  <mat-grid-tile
+    *ngFor="let reponse of reponses">
+    <app-reponses [reponse]="reponse" (click)="isGoodAnswers($event)"></app-reponses>
+  </mat-grid-tile>
+</mat-grid-list>
+
